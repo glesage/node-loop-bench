@@ -1,0 +1,11 @@
+{
+    "name": "example",
+    "version": "0.0.0",
+    "description": "Example",
+    "main": "example.js",
+    "dependencies":
+    {
+        "lodash": "4.17.4",
+        "node-loop-bench": "file:.."
+    }
+}
