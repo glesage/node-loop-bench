@@ -167,6 +167,13 @@ module.exports = function (config)
                 func(i);
             }
         },
+        'do while desc': function (data, func)
+        {
+            var i = data.length;
+            do
+                func(i);
+            while (i--);
+        },
         'pop': function (data, func)
         {
             while (data.length)
