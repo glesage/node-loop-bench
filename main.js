@@ -125,6 +125,14 @@ module.exports = function (config)
                 func(data[x]);
             }
         },
+        'for loop - i--': function (data, func)
+        {
+            var i = data.length - 1;
+            for (; i > 0; i--)
+            {
+                func(data[i]);
+            }
+        },
         'forEach': function (data, func)
         {
             data.forEach(func);
