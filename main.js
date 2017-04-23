@@ -152,6 +152,13 @@ module.exports = function (config)
                 func(data[i++]);
             }
         },
+        'do while': function (data, func)
+        {
+            var i = 0;
+            do
+                func(data[i++]);
+            while (i < data.length);
+        },
         'while desc': function (data, func)
         {
             var i = data.length;
