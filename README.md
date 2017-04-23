@@ -48,7 +48,7 @@ looper(
 });
 ```
 
-### Passing a custom loop to benchmark ([see example](https://github.com/glesage/node-loop-bench/example/example.js))
+### Passing a custom loop to benchmark ([see example](https://github.com/glesage/node-loop-bench/blob/master/example/example.js))
 ```
 var looper = require('node-loop-bench');
 var _ = require('lodash');
