@@ -15,6 +15,7 @@ looper(
 {
     counts: [10000]
 });
+```
 
 ### Options
 ```
