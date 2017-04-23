@@ -22,7 +22,7 @@ looper(
 var looper = require('node-loop-bench');
 looper(
 {
-	// How many test iterations of each loop types should be run
+    // How many test iterations of each loop types should be run
     repeat: 10,
 
     // Run the loops 10 & 100 times and show results for both lengths
@@ -55,12 +55,6 @@ var _ = require('lodash');
 
 looper(
 {
-    repeat: 10,
-    counts: [10, 100, 1000, 10000],
-    work: function (i)
-    {
-        return JSON.parse(JSON.stringify(i));
-    },
     loops:
     {
         'lodash each': function (data, func)
