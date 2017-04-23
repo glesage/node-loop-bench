@@ -2,7 +2,7 @@ node-loop-bench
 ===============
 NodeJS Loop Benchmarking tool, plugs into your environment and takes in custom loops
 
-![Example usage](https://media.giphy.com/media/xUA7bf3wo7VVQczY0E/giphy.gif)
+![Example usage](https://media.giphy.com/media/xUPGciK59MwntSkacg/giphy.gif)
 
 Installation
 ------------

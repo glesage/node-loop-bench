@@ -19,7 +19,7 @@ module.exports = function (config)
     var results = {};
     var loopData = [];
 
-    console.log('Building ' + config.count + ' objects for looping');
+    console.log('Building data...');
     config.counts.forEach(function (count)
     {
         var currData = [];
@@ -176,7 +176,7 @@ module.exports = function (config)
      * Run all loops in a reduce chain to avoid caching issues
      */
     var repeatArray = Array(config.repeat).fill().map((_, i) => i * i);
-    console.log('\nLooping...');
+    console.log('Looping...');
     return repeatArray.reduce(function (lastIter, currIter, idx)
     {
         return lastIter.then(function ()
