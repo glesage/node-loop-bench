@@ -133,6 +133,13 @@ module.exports = function (config)
                 func(data[i]);
             }
         },
+        'for in': function (data, func)
+        {
+            for (var i in data)
+            {
+                func(data[i]);
+            }
+        },
         'forEach': function (data, func)
         {
             data.forEach(func);
