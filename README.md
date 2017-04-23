@@ -4,7 +4,7 @@ NodeJS Loop Benchmarking tool, plugs into your environment and takes in custom l
 
 Installation
 ------------
-npm install --save node-loop-bench
+`npm install --save node-loop-bench`
 
 Usage
 -----
