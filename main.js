@@ -84,19 +84,33 @@ module.exports = function (config)
             ['LOOP TYPE', ...config.counts]
         ];
 
+        var bases = [];
+        Object.keys(results['while desc']).forEach(function (countType)
+        {
+            var times = results['while desc'][countType];
+            var sum = times.reduce(function (acc, val)
+            {
+                return acc + val;
+            }, 0);
+            bases.push(sum);
+        });
+
         Object.keys(results).forEach(function (loopType)
         {
             var currentResult = [loopType];
-            Object.keys(results[loopType]).forEach(function (countType)
+            Object.keys(results[loopType]).forEach(function (countType, idx)
             {
                 var times = results[loopType][countType];
                 var sum = times.reduce(function (acc, val)
                 {
                     return acc + val;
                 }, 0);
-                var average = (sum / times.length).toFixed(2);
 
-                currentResult.push(average);
+                var relative = '-';
+                if (bases[idx] > sum) relative = '-' + String((bases[idx] / sum).toFixed(2)) + '%';
+                else if (bases[idx] < sum) relative = '+' + String((bases[idx] / sum).toFixed(2)) + '%';
+
+                currentResult.push(relative);
             });
             tableData.push(currentResult);
         });
